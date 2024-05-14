@@ -9,13 +9,30 @@ print(df.head())
 
 #Funçao para boxplot
 def plot_boxplot_legendary(df):
-    # Tiltros
-    df_filtered = df[df['legendary'] == False]
+    # Filtros
+    df_filtered = df[(df['legendary'] == False) & 
+                    (~df['name'].str.contains('Mega')) & 
+                    (~df['name'].str.contains('Gigantamax'))]
 
     plt.figure(figsize=(12, 6))
     sns.boxplot(data=df_filtered, x='generation', y='total', palette='Set2')
     plt.title('Total de CP por geração (apenas não lendários)')
     plt.xlabel('Geração')
+    plt.ylabel('Total de CP')
+    plt.show()
+
+
+#Funçao para boxplot
+def plot_boxplot_type(df):
+    # Filtros
+    df_filtered = df[(df['legendary'] == False) & 
+                    (~df['name'].str.contains('Mega')) & 
+                    (~df['name'].str.contains('Gigantamax'))]
+
+    plt.figure(figsize=(12, 6))
+    sns.boxplot(data=df_filtered, x='type1', y='total', palette='Set2')
+    plt.title('Total de CP por Tipo (Nao lendarios)')
+    plt.xlabel('Tipo de pokemon')
     plt.ylabel('Total de CP')
     plt.show()
 
@@ -35,7 +52,8 @@ def plot_heatmap(df):
     plt.show()
 
 
-plot_heatmap(df)
-plot_boxplot_legendary(df)
+# plot_heatmap(df)
+# plot_boxplot_legendary(df)
+plot_boxplot_type(df)
 
 
