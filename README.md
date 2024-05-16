@@ -1,4 +1,4 @@
-Opa, pessoal! Faz um tempo que queria começar a postar coisas relacionadas a análises de dados, então me motivei a falar sobre um tema que eu gosto: Pokémon.
+Anlisando Pokémons.
 Peguei uma base no Kaggle com atributos, origem e tipo de todos os Pokémon, e trabalhei nela com princípios básicos de Python e as bibliotecas matplotlib, pandas e seaborn, a tríade dos gráficos.
 Para começar, vamos falar sobre o tipo de gráfico boxplot. Gosto bastante dele porque entrega muita informação de maneira organizada. Brevemente, um gráfico boxplot mostra a distribuição de um conjunto de dados, destacando a mediana, quartis e possíveis outliers.
 
